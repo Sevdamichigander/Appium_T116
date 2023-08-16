@@ -26,7 +26,7 @@ public class apkYukleme {
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
 
-        capabilities.setCapability(MobileCapabilityType.APP, ""); //C:\Users\33602\IdeaProjects\APPIUM_T116\Apps\arabam.com_4.8.0_Apkpure.apk dosya yolunu yaziyoruz
+        capabilities.setCapability(MobileCapabilityType.APP, "C:\\Users\\33602\\IdeaProjects\\APPIUM_T116\\Apps\\Kiwi.com - Book Cheap Flights_2023.14.0_Apkpure (1).apk"); //C:\Users\33602\IdeaProjects\APPIUM_T116\Apps\arabam.com_4.8.0_Apkpure.apk dosya yolunu yaziyoruz
 
         driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"),capabilities );
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);

@@ -160,9 +160,6 @@ public class arabamComOdev {
         Assert.assertTrue(Integer.parseInt(ortSonSonuc)>500000);
 
 
-
-
-
         //int actualPriceInt = Integer.parseInt(actualAveragePrice);
 //
         //if (actualPriceInt>500.000){
@@ -202,5 +199,4 @@ public class arabamComOdev {
                 .waitAction(waitOptions(Duration.ofSeconds(2))) // Uygun bir bekleme süresi
                 .perform();
  */
-
 
