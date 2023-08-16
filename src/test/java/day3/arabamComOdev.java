@@ -127,9 +127,9 @@ public class arabamComOdev {
         driver.findElementByXPath("//*[@text='Devam']").click();
 
         // aracin rengini secelim
-        driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[12]/android.widget.TextView)");
+        driver.findElementByXPath("//*[@text='Kırmızı']").click();
 
-        //// opsiyel donanim (varsa) seecelim
+        // opsiyel donanim (varsa) seecelim
         // -- opsiyonel donanim yok
         Thread.sleep(1000);
 
@@ -157,7 +157,7 @@ public class arabamComOdev {
 
         ortSonSonuc = ortSonSonuc.replaceAll("\\D", "");
         System.out.println(ortSonSonuc);
-        Assert.assertTrue(Integer.parseInt(ortSonSonuc)<500000);
+        Assert.assertTrue(Integer.parseInt(ortSonSonuc)>500000);
 
 
 
