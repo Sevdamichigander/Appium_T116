@@ -9,7 +9,9 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class Driver {
+
     private static AndroidDriver appiumDriver;
+
     static final String TELEFONADI="PIXEL2";
     static final String ANDROIDVERSION="10.0";
     static final String PLATFORM="Android";
@@ -24,6 +26,7 @@ public class Driver {
         }
 
         if (appiumDriver == null) {
+
             DesiredCapabilities caps =new DesiredCapabilities();
             caps.setCapability(MobileCapabilityType.DEVICE_NAME, TELEFONADI);
             caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, ANDROIDVERSION);
@@ -34,6 +37,7 @@ public class Driver {
             caps.setCapability(MobileCapabilityType.NO_RESET,false);
             // true uygulama sifirlanmiyor onceki adimlari muhafaza ediyor
             //false ise her test baslangicinda uygulamayi sifirliyor ve uygulama en bastan basliyor
+
             if (ConfigReader.getProperty("platformName").equals("Android")) {
                 assert appiumServerURL != null;
                 appiumDriver = new AndroidDriver<>(appiumServerURL,caps);
