@@ -1,4 +1,4 @@
-package day3;
+package tests.day3;
 
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
@@ -7,6 +7,7 @@ import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
@@ -24,6 +25,7 @@ public class kiwiCom {
 
     @BeforeTest
     public void setUp() throws MalformedURLException {
+
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "PIXEL 2");
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "10.0");
@@ -63,47 +65,75 @@ public class kiwiCom {
 
         for (int i=0; i<3; i++){
             action.press(PointOption.point(538,1689)).release().perform();
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         }
 
         // Trip type,one way olarak secilir
-        Thread.sleep(1000);
+        Thread.sleep(5000);
         driver.findElementByXPath("//*[@text='Return']").click();
         driver.findElementByXPath("//*[@text='One way']").click();
 
         // kalkis ulkesi secenegine tiklanir ve default olan ulke kaldirilir
         driver.findElementByXPath("//*[@text='Strasbourg']").click();
+        Thread.sleep(2000);
         action.press(PointOption.point(1001,1556)).release().perform();
+        Thread.sleep(2000);
         action.press(PointOption.point(1001,1556)).release().perform();
+        Thread.sleep(2000);
+
 
         // kalkis yapilacak ulke/sehir girilir ve sec e tiklanir
 
         AndroidElement fromBox = driver.findElementByXPath("//*[@class='android.widget.EditText']");
         fromBox.sendKeys("Paris");
-        fromBox.sendKeys(Keys.ARROW_DOWN);
-        fromBox.sendKeys(Keys.ENTER);
+        Thread.sleep(4000);
+
+        driver.findElementByXPath("//*[@text='CDG, Charles de Gaulle Airport']").click();
+       //fromBox.sendKeys(Keys.ARROW_DOWN);
+       //Thread.sleep(4000);
+       //fromBox.sendKeys(Keys.ENTER);
+        Thread.sleep(4000);
         driver.findElementByXPath("//*[@text='Choose']").click();
+        Thread.sleep(4000);
 
         // varis ulkesi secenegine tiklanir ve gidilecek ulke girilir
         driver.findElementByXPath("//*[@text='Anywhere']").click();
+        Thread.sleep(4000);
+
         AndroidElement arrivalBox = driver.findElementByXPath("//*[@class='android.widget.EditText']");
+        Thread.sleep(4000);
+
         arrivalBox.sendKeys("Italy");
-        arrivalBox.sendKeys(Keys.ARROW_DOWN);
-        fromBox.sendKeys(Keys.ENTER);
+        Thread.sleep(8000);
+
+        driver.findElementByXPath("//*[@text='NAP, Naples International']").click();
+        Thread.sleep(4000);
 
         driver.findElementByXPath("//*[@text='Choose']").click();
+        Thread.sleep(4000);
 
         // gidis tarihi eylul ayinin 21 i olarak secilir ve set date e tiklanir
         driver.findElementByXPath("//*[@text='Anytime']").click();
-        action.press(PointOption.point(877,1300))
-                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(500)))
-                .moveTo(PointOption.point(676,906))
-                .release().perform();
+        Thread.sleep(8000);
+
+        action.press(PointOption.point(80, 205)) // Telefondaki ilk tiklama islemini yaptigimiz yer
+                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(1000))) // press ve moveTo arasindaki mesafenin zaman araligi
+                .moveTo(PointOption.point(80, 1005))// Telefondaki kaydirma islemini gerceklestirecegimiz yer
+                .release()                                      //ekrandan parmagimizi kaldirma
+                .perform();
+        Thread.sleep(4000);
+
         driver.findElementByXPath("//*[@text='Set date']").click();
+        Thread.sleep(4000);
+
 
         // search butonuna tiklanir
         driver.findElementByXPath("//*[@text='Search']").click();
+        Thread.sleep(4000);
+
         // en  ucuz ve aktarmasiz filtrelemeleri yapilir
+        Thread.sleep(4000);
+
         driver.findElementByXPath("//*[@text='Price']").click();
         driver.findElementByXPath("//*[@text='Cheapest']").click();
         driver.findElementByXPath("//*[@text='Stops']").click();

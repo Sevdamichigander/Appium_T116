@@ -1,4 +1,4 @@
-package day2;
+package tests.day2;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;

@@ -1,4 +1,4 @@
-package day3;
+package tests.day3;
 
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
@@ -142,6 +142,7 @@ public class arabamComOdev {
        action.press(PointOption.point(538,792)).release().perform();
        action.press(PointOption.point(205,1611)).release().perform();
        Thread.sleep(1000);
+
         driver.findElementByXPath("//*[@text='Devam']").click();
 
         Thread.sleep(1000);
@@ -159,44 +160,7 @@ public class arabamComOdev {
         System.out.println(ortSonSonuc);
         Assert.assertTrue(Integer.parseInt(ortSonSonuc)>500000);
 
-
-        //int actualPriceInt = Integer.parseInt(actualAveragePrice);
-//
-        //if (actualPriceInt>500.000){
-        //    System.out.println("Aracimin fiyati 500.000 tl den fazladir.");
-        //}else{
-        //    System.out.println("Aracimin fiyati 500.000 tl den azdir");
-        //}
-//
-        //// uygulamayi kapatalim
-//
-        //driver.closeApp();
-
     }
 }
 
-
-       /*
-        // TouchAction touchAction = new TouchAction<>(driver);
-
-        //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-
-      // AndroidElement volkswagen = driver.findElementByXPath("//android.widget.TextView[@text='Volkswagen']");
-
-        // Öğenin koordinatlarını alın
-      //int x = volkswagen.getLocation().getX();
-      //int y = volkswagen.getLocation().getY();
-        // Koordinatları kullanarak tıklama işlemini gerçekleştirin
-       //touchAction.tap(PointOption.point(x, y)).waitAction(waitOptions(Duration.ofSeconds(20))).perform();
-
-
-// Öğenin koordinatlarını alın
-        int x = volkswagen.getLocation().getX() + (volkswagen.getSize().getWidth() / 2);
-        int y = volkswagen.getLocation().getY() + (volkswagen.getSize().getHeight() / 2);
-
-// Dokunma işlemini gerçekleştirin
-        touchAction.tap(PointOption.point(x, y))
-                .waitAction(waitOptions(Duration.ofSeconds(2))) // Uygun bir bekleme süresi
-                .perform();
- */
 
