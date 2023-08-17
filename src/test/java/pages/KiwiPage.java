@@ -20,6 +20,20 @@ public class KiwiPage {
     @FindBy(xpath = "//*[@class='android.widget.EditText']")
     public WebElement fromTextBox;
 
+    @FindBy(xpath = "(//*[@class='android.view.View'])[8]")
+    public WebElement fromBoxIlkSecenek;
+
+    @FindBy(xpath = "//*[@text='Choose']")
+    public WebElement chooseButton;
+
+    @FindBy(xpath = "//*[@text='Set date']")
+    public WebElement setDateButton;
+
+    @FindBy(xpath = "//*[@text='Search']")
+    public WebElement searchButton;
+
+    @FindBy(xpath = "(//*[@class='android.widget.TextView'])[12]")
+    public WebElement fiyatSonucu;
 
 
 
