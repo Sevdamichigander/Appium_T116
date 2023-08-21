@@ -15,7 +15,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 
-public class kiwiCom1 {
+public class kiwiApp1 {
 
     AndroidDriver<AndroidElement> driver;
 
@@ -61,7 +61,7 @@ public class kiwiCom1 {
         Thread.sleep(1000);
 
         for (int i=0; i<3; i++){
-            action.press(PointOption.point(538,1689)).release().perform();
+            action.press(PointOption.point(538,1689)).release().perform(); // parmagimizla tek tik yapma ==> press
             Thread.sleep(2000);
         }
 

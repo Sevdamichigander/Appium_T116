@@ -9,14 +9,15 @@ import pages.KiwiPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class kiwiApp {
+public class kiwiApp2 {
 
 
     AndroidDriver<AndroidElement> driver = Driver.getAndroidDriver();
+    // Bu esitlik sayesinde bir onceki derste olusturdugumuz @BeforeTest e ihtiyacimiz kalmadi.
+
     TouchAction action = new TouchAction<>(driver);
     KiwiPage kiwiPage = new KiwiPage();
 
-    // Bu esitlik sayesinde bir onceki derste olusturdugumuz @BeforeTest e ihtiyacimiz kalmadi.
 
     @Test
     public void kiwiTest() throws InterruptedException {

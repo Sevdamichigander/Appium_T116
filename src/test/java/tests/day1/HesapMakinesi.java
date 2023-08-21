@@ -25,7 +25,7 @@ public class HesapMakinesi {
         // Sadece android cihazlarda kullanilir.
         //Android olmayan cihazlarda kesin calismaz anlamina gelmez. Ama hata orani daha yuksek olur.
 
-        AppiumDriver<MobileElement> driver2; // Hem android hem ios isletim sistgemine sahip olan cihazlar icin kullanilir.
+        AppiumDriver<MobileElement> driver2; // Hem android hem ios isletim sistemine sahip olan cihazlar icin kullanilir.
         //Android driver icin ayri bir driver oldugundan Appium driver ios ve turevleri icin kullanilmaktadir.
 
 
